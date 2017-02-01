@@ -3,23 +3,23 @@ package com.jardelnovaes.jsf.samples.web;
 import java.io.Serializable;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Controller;
 
 import com.jardelnovaes.jsf.samples.model.User;
 import com.jardelnovaes.jsf.samples.service.UserService;
 
-// @Named
-// @ViewScoped
-@Controller
+@Named
 @Scope("view")
 public class UserMB implements Serializable {
 
 	private static final long serialVersionUID = 814939985769386037L;
 
-	// @Inject
-	@Autowired
+	 @Inject
+	//@Autowired
 	private UserService userService;
 
 	private List<User> users;
@@ -49,6 +49,13 @@ public class UserMB implements Serializable {
 	public void listUsers() {
 		users = userService.getAll();
 	}
+	
+	@PostConstruct
+    private void init() {
+        // TODO Auto-generated method stub
+	    System.out.println("init()");
+
+    }
 
 	public void addUser() {
 		User usr = new User();
