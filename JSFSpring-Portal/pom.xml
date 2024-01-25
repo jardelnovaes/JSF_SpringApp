@@ -15,7 +15,7 @@
   	<jsf.version>2.2.4</jsf.version>
   	<jstl.version>1.1.2</jstl.version>
   	<jsp.version>2.3.1</jsp.version>
-  	<primefaces.version>6.0</primefaces.version>
+  	<primefaces.version>8.0</primefaces.version>
   	<java.cdi>1.2</java.cdi>
   	<spring.webflow>2.3.1.RELEASE</spring.webflow>
   	<javax.inject.version>1</javax.inject.version>
